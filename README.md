@@ -1,6 +1,6 @@
 # illustration.css
 
-Front-end design patterns for illustrations on websites. A work in progress.
+Front-end design patterns for adding illustrations onto websites. A work in progress.
 
 ## persistent ornamentation
 
