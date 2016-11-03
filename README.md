@@ -2,6 +2,8 @@
 
 Front-end design patterns for adding illustrations onto websites. A work in progress.
 
+Version 0.02
+
 ---
 
 ## border image
@@ -14,7 +16,7 @@ Example:[Comics by Jason Li](http://comics.hongkonggong.com):
 
 ![Screenshot of Comics by Jason Li](screenshots/border-image-casestudy1-0.jpg)
 
-TL;DR – it's difficult to simultaneously create a rough, organic edge *and* control the color of the enclosed box. 
+TL;DR – manual, trial-and-error fidgeting with border size values is required to create a rough, organic edge *and* allow control over the enclosed box. 
 
 Take this border image I made for [my comics site](http://comics.hongkonggong.com) (it has a transparent background):
 
