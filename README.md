@@ -6,7 +6,7 @@ Front-end design patterns for adding illustrations onto websites. A work in prog
 
 ## border image
 
-Hard, square edges on <div>s and boxes are boring – why not spruce up your layouts with some illustrated borders? Check out [CSS Tricks' primer on the border-image CSS property](https://css-tricks.com/understanding-border-image/).
+Hard, square edges on ```<div>```s and boxes are boring – why not spruce up your layouts with some illustrated borders? Check out [CSS Tricks' primer on the border-image CSS property](https://css-tricks.com/understanding-border-image/).
 
 ### Case study: hand-drawn black border
 
