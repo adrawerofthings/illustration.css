@@ -1,6 +1,6 @@
 # illustration.css
 
-Front-end design patterns for adding illustrations onto websites. A work in progress.
+Design patterns for adding illustrations onto web pages. With CSS! A work in progress.
 
 Version 0.02
 
