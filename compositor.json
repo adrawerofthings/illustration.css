@@ -1,0 +1,138 @@
+{
+  "name": "hongkonggong/illustration.css",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "illustration.css",
+  "branch": "master",
+  "style": {
+    "name": "Default",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BannerHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
+    "fontWeight": 400,
+    "bold": 600,
+    "lineHeight": 1.5,
+    "typeScale": [
+      72,
+      48,
+      24,
+      20,
+      16,
+      14,
+      12
+    ],
+    "monospace": "Menlo, monospace",
+    "heading": {
+      "fontFamily": null,
+      "fontStyle": null,
+      "fontWeight": 600,
+      "lineHeight": 1.25,
+      "textTransform": null,
+      "letterSpacing": null
+    },
+    "h0": {},
+    "h1": {},
+    "h2": {},
+    "h3": {},
+    "h4": {},
+    "h5": {},
+    "h6": {},
+    "alternativeText": {},
+    "space": [
+      0,
+      8,
+      16,
+      32,
+      48,
+      64,
+      96
+    ],
+    "layout": {
+      "maxWidth": 1024,
+      "centered": false
+    },
+    "colors": {
+      "text": "#111",
+      "background": "#fff",
+      "primary": "#08e",
+      "secondary": "#059",
+      "highlight": "#e08",
+      "border": "#ddd",
+      "muted": "#eee"
+    },
+    "border": {
+      "width": 1,
+      "radius": 2
+    },
+    "link": {},
+    "button": {
+      "hover": {
+        "boxShadow": "inset 0 0 0 999px rgba(0, 0, 0, .125)"
+      }
+    },
+    "input": {},
+    "body": {
+      "margin": 0
+    },
+    "breakpoints": {
+      "xs": "@media screen and (max-width:40em)",
+      "sm": "@media screen and (min-width:40em)",
+      "md": "@media screen and (min-width:52em)",
+      "lg": "@media screen and (min-width:64em)"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/hongkonggong/illustration.css",
+          "text": "GitHub"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "illustration.css",
+      "subhead": "Front-end design patterns to incorporate illustrations into web design",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "illustration.css: Front-end design patterns to incorporate illustrations into web design",
+          "url": null
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "hongkonggong",
+          "repo": "illustration.css"
+        }
+      ]
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n<p>Front-end design patterns for adding illustrations onto websites. A work in progress.</p>\n<p>Version 0.02</p>\n<hr>\n<h2>border image</h2>\n<p>Hard, square edges on <code>&lt;div&gt;</code>s and boxes are boring &#x2013; why not spruce up your layouts with some illustrated borders? Check out <a href=\"https://css-tricks.com/understanding-border-image/\">CSS Tricks&apos; primer on the border-image CSS property</a>.</p>\n<h3>Case study: hand-drawn black border</h3>\n<p>Example:<a href=\"http://comics.hongkonggong.com\">Comics by Jason Li</a>:</p>\n<p><img src=\"screenshots/border-image-casestudy1-0.jpg\"></p>\n<p>TL;DR &#x2013; manual, trial-and-error fidgeting with border size values is required to create a rough, organic edge <em>and</em> allow control over the enclosed box. </p>\n<p>Take this border image I made for <a href=\"http://comics.hongkonggong.com\">my comics site</a> (it has a transparent background):</p>\n<p><img src=\"assets/border-image-handdrawn.png\"></p>\n<p>Without fidgeting, if I applied these background and border-image properties:</p>\n<pre><span class=\"hljs-built_in\">background</span>-<span class=\"hljs-built_in\">color</span>: #C8E9F9;\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">width</span>: 1<span class=\"hljs-built_in\">rem</span>;\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">image</span>-source: url(&apos;assets/BorderImage.png&apos;);\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">image</span>-slice: <span class=\"hljs-number\">5</span><span class=\"hljs-symbol\">%</span> fill;\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">image</span>-<span class=\"hljs-built_in\">width</span>: 1<span class=\"hljs-built_in\">rem</span>;\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">image</span>-repeat: <span class=\"hljs-built_in\">round</span>;</pre><p>Then I&apos;d get:</p>\n<p><img src=\"screenshots/border-image-casestudy1-1.jpg\"></p>\n<p>So I add a <code>border-image-outset: 1rem;</code> to push the border out:</p>\n<p><img src=\"screenshots/border-image-casestudy1-2.jpg\"></p>\n<p>But this leaves big white borders around the edges. I then fidget with the values &#x2013; by trial and error &#x2013; so the blue and the black line butt up against one another nicely, and my black line is a nice-looking width:</p>\n<pre><span class=\"hljs-built_in\">background</span>-<span class=\"hljs-built_in\">color</span>: #C8E9F9;\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">width</span>: <span class=\"hljs-number\">0.</span>67<span class=\"hljs-built_in\">rem</span>;\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">image</span>-source: url(&apos;assets/BorderImage.png&apos;);\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">image</span>-slice: <span class=\"hljs-number\">4</span><span class=\"hljs-symbol\">%</span> <span class=\"hljs-number\">4.5</span><span class=\"hljs-symbol\">%</span> fill;\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">image</span>-<span class=\"hljs-built_in\">width</span>: <span class=\"hljs-number\">0.</span>67<span class=\"hljs-built_in\">rem</span>;\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">image</span>-outset: <span class=\"hljs-number\">0.</span>45<span class=\"hljs-built_in\">rem</span> <span class=\"hljs-number\">0.</span>35<span class=\"hljs-built_in\">rem</span>;\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">image</span>-repeat: <span class=\"hljs-built_in\">round</span>;</pre><p><img src=\"screenshots/border-image-casestudy1-3.jpg\"></p>\n<p>This works unless I need to stick in a photo to be fully-flush with the black border.</p>\n<p><img src=\"screenshots/border-image-casestudy1-4.jpg\"></p>\n<p>In that case, I manually adjust the border-image-outset till it crops right to the edge of the image (and kill the background color to eliminate minute stray edges):</p>\n<pre><span class=\"hljs-built_in\">background</span>-<span class=\"hljs-built_in\">color</span>: inherit;\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">width</span>: <span class=\"hljs-number\">0.</span>67<span class=\"hljs-built_in\">rem</span>;\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">image</span>-source: url(&apos;assets/BorderImage.png&apos;);\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">image</span>-slice: <span class=\"hljs-number\">4</span><span class=\"hljs-symbol\">%</span> <span class=\"hljs-number\">4.5</span><span class=\"hljs-symbol\">%</span> fill;\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">image</span>-<span class=\"hljs-built_in\">width</span>: <span class=\"hljs-number\">0.</span>67<span class=\"hljs-built_in\">rem</span>;\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">image</span>-outset: <span class=\"hljs-number\">0.</span>45<span class=\"hljs-built_in\">rem</span> <span class=\"hljs-number\">0.</span>35<span class=\"hljs-built_in\">rem</span> <span class=\"hljs-number\">0.</span>2<span class=\"hljs-built_in\">rem</span> <span class=\"hljs-number\">0.</span>4<span class=\"hljs-built_in\">rem</span>;\n<span class=\"hljs-built_in\">border</span>-<span class=\"hljs-built_in\">image</span>-repeat: <span class=\"hljs-built_in\">round</span>;</pre><p><img src=\"screenshots/border-image-casestudy1-5.jpg\"></p>\n<p>If you look closely, you can see that the image eats into the border a little bit, but that&apos;s preferable to have a colored or white space between the two.</p>\n<hr>\n<h2>persistent ornamentation</h2>\n<p>Given that many users dislike large, clunky, persistent navigation bars, why not consider replacing it with some <strong>persistent ornamentation</strong>? As with persistent navigation, the trick is to make sure that it doesn&apos;t get in the way. I like to use non-square images with transparent &quot;holes&quot; &#x2013; and to keep it small, especially on mobile.</p>\n<p>Example: <a href=\"http://notebook.hongkonggong.com\">Tall Tales, Short Stories &amp; Modest Musings</a> &#x2013; note the plants at the bottom:</p>\n<p><img src=\"screenshots/persistent-ornamentation.gif\"></p>\n<p>Needless to say, if a website already has a persistent navigation bar, there probably isn&apos;t any room left for further ornamentation.</p>\n<h3>css properties</h3>\n<pre><span class=\"hljs-attribute\">position</span>: fixed;\n<span class=\"hljs-attribute\">width</span>: <span class=\"hljs-number\">100%</span>;\n<span class=\"hljs-attribute\">background-image</span>: url(<span class=\"hljs-string\">&quot;../image.ext&quot;</span>);\n<span class=\"hljs-attribute\">background-position</span>: bottom center;\n<span class=\"hljs-attribute\">background-repeat</span>: repeat-x;\n<span class=\"hljs-attribute\">bottom</span>: <span class=\"hljs-number\">0</span>;</pre><p>N.B. <code>height</code> varies depending on the image and screen size.</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/hongkonggong/illustration.css",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/hongkonggong",
+          "text": "hongkonggong"
+        }
+      ]
+    }
+  ]
+}
